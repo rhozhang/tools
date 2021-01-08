@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+<title></title>
+
+
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; background-color: #f8f8f8; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+pre, code { background-color: #f8f8f8; }
+code > span.kw { color: #204a87; font-weight: bold; } /* Keyword */
+code > span.dt { color: #204a87; } /* DataType */
+code > span.dv { color: #0000cf; } /* DecVal */
+code > span.bn { color: #0000cf; } /* BaseN */
+code > span.fl { color: #0000cf; } /* Float */
+code > span.ch { color: #4e9a06; } /* Char */
+code > span.st { color: #4e9a06; } /* String */
+code > span.co { color: #8f5902; font-style: italic; } /* Comment */
+code > span.ot { color: #8f5902; } /* Other */
+code > span.al { color: #ef2929; } /* Alert */
+code > span.fu { color: #000000; } /* Function */
+code > span.er { color: #a40000; font-weight: bold; } /* Error */
+code > span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #000000; } /* Constant */
+code > span.sc { color: #000000; } /* SpecialChar */
+code > span.vs { color: #4e9a06; } /* VerbatimString */
+code > span.ss { color: #4e9a06; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #000000; } /* Variable */
+code > span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #ce5c00; font-weight: bold; } /* Operator */
+code > span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
+code > span.ex { } /* Extension */
+code > span.at { color: #c4a000; } /* Attribute */
+code > span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
+code > span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+
+
+<link href="data:text/css;charset=utf-8,%2Etitle%20%7B%0Acolor%3A%20darkblue%3B%0Afont%2Dsize%3A%2045px%3B%0Afont%2Dweight%3A%20900%3B%0Atext%2Dalign%3A%20center%3B%0A%7D%0A%2Eauthor%20%7B%0Acolor%3A%20black%3B%0Afont%2Dsize%3A%2030px%3B%0Atext%2Dalign%3A%20center%3B%0A%7D%0A%2Edate%20%7B%0Acolor%3A%20black%3B%0Afont%2Dsize%3A%2030px%3B%0Atext%2Dalign%3A%20center%3B%0A%7D%0A%23TOC%20ul%20li%20a%20%7B%0Acolor%3A%20green%3B%0A%7D%0Ah1%20%7B%0Afont%2Dfamily%3A%20%22sans%2Dserif%22%3B%0Afont%2Dsize%3A%2035px%3B%0Afont%2Dweight%3A%20900%3B%0Acolor%3A%20darkblue%3B%0A%7D%0Ah2%20%7B%0Afont%2Dsize%3A%2030px%3B%0Afont%2Dweight%3A%20bold%3B%0A%7D%0Ah3%20%7B%0Afont%2Dsize%3A%2030px%3B%0Afont%2Dstyle%3A%20italic%3B%0A%7D%0Abody%7B%0Acounter%2Dreset%3Atable%20figure%3B%0A%7D%0Acaption%3A%3Abefore%7B%0Acounter%2Dincrement%3A%20table%3B%0Acontent%3A%20%22table%20%22%20counter%28table%29%20%22%3A%20%22%3B%0A%7D%0A%2Ecaption%3A%3Abefore%7B%0Acounter%2Dincrement%3A%20figure%3B%0Acontent%3A%20%22Fig%20%22%20counter%28figure%29%20%22%3A%20%22%3B%0A%7D%0A" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+
+
+
+
+
+
+<div id="TOC">
+<ul>
+<li><a href="#ftp-client-in-ubuntu">FTP Client in Ubuntu</a><ul>
+<li><a href="#wget-and-wput">wget and wput</a></li>
+<li><a href="#ftp-clent">ftp clent</a><ul>
+<li><a href="#connect">connect</a></li>
+<li><a href="#working-with-directories">working with directories</a></li>
+<li><a href="#pull-file">pull file</a></li>
+<li><a href="#push-file">push file</a></li>
+<li><a href="#closing-connection">closing connection</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+
+<div id="ftp-client-in-ubuntu" class="section level1">
+<h1>FTP Client in Ubuntu</h1>
+<div id="wget-and-wput" class="section level2">
+<h2>wget and wput</h2>
+<p>To pull a file from ftp, we can use wget; to push a file to ftp, use wput. By default, wget has been installed on your Ubuntu.</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">sudo</span> apt-get install wput
+<span class="fu">wget</span> -O <span class="st">&quot;~/Downloads/sp.csv&quot;</span> <span class="st">&quot;ftp://zsqdo:@10.1.12.5/data/sp500.csv&quot;</span>
+<span class="ex">wput</span> <span class="op">&lt;</span>mylocalfile<span class="op">&gt;</span> <span class="st">&quot;ftp://zsqup::10.1.12.5/R/file_name.R&quot;</span></code></pre></div>
+</div>
+<div id="ftp-clent" class="section level2">
+<h2>ftp clent</h2>
+<p>Using ftp client, we can interact with ftp more freely.</p>
+<div id="connect" class="section level3">
+<h3>connect</h3>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">ftp</span> 10.1.12.5
+<span class="co"># enter name and password to login</span>
+<span class="co"># if anonymous ftp server, Name: anonymous; password: &lt;empty&gt;</span></code></pre></div>
+</div>
+<div id="working-with-directories" class="section level3">
+<h3>working with directories</h3>
+<ul>
+<li>ls: list directories or files</li>
+<li>cd: change directory</li>
+<li>mkdir: create directory</li>
+<li>lcd: change local directory</li>
+</ul>
+</div>
+<div id="pull-file" class="section level3">
+<h3>pull file</h3>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="bu">cd</span> do/data
+<span class="ex">lcd</span> ~/Downloads
+<span class="ex">get</span> sp500.csv</code></pre></div>
+</div>
+<div id="push-file" class="section level3">
+<h3>push file</h3>
+<ul>
+<li>put: push single file</li>
+<li>mput: push multiple files</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">mput</span> *.R</code></pre></div>
+</div>
+<div id="closing-connection" class="section level3">
+<h3>closing connection</h3>
+<p>bye, quit, or exit</p>
+</div>
+</div>
+</div>
+
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
