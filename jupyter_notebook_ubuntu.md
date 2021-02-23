@@ -30,7 +30,7 @@ using IJulia
 notebook(detached = true)
 ```
 
-set detached as true to launch a notebook server in the background that will persist even when you quit Julia.
+Setting detached as true to launch a notebook server in the background that will persist even when you quit Julia.
 This is also useful if you want to keep using the current Julia session instead of opening a new one
 
 By default, the notebook "dashboard" opens in your home directory (homedir()), but you can open the dashboard in

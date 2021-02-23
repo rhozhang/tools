@@ -12,11 +12,11 @@
 
 3. extract the gzipped archive
 
-     tar -xf Python-3.9.0.tgz
+     tar -xf Python-3.9.1.tgz
 
 4. configure
 
-     cd Python-3.9.0
+     cd Python-3.9.1
      ./configure --enable-optimizations
 
 option --enable-optimizations optimizes the python binary by running multiple tests

@@ -2,7 +2,7 @@
 
 ## download
 
-[ustc mirror]<https://mirrors.ustc.edu.cn/julia-releases/bin/linux/x64/1.5/julia-1.5.2-linux-x86_64.tar.gz>
+[ustc mirror]<http://mirrors.ustc.edu.cn/julia-releases/bin/linux/x64/1.5/julia-1.5.3-linux-x86_64.tar.gz>
 
 ## install dependencies
 
@@ -32,15 +32,22 @@ sudo apt-get install git
 
 ```bash
 mkdir app_rho
-tar -xvzf Downloads/sftwr/julia-1.5.2-linux-x86_64.tar.gz --directory app_rho
-cd app_rho/julia-1.5.2
+tar -xvzf Downloads/sftwr/julia-1.5.3-linux-x86_64.tar.gz --directory app_rho
+cd app_rho/julia-1.5.3
 pwd   # <julia-path>
 ```
 
 ## create a symbolic link to julia
 
 ```bash
-sudo ln -s /home/rho/app_rho/julia-1.5.2/bin/julia /usr/local/bin/julia
+sudo ln -s /home/rho/app_rho/julia-1.5.3/bin/julia /usr/local/bin/julia
+```
+
+An alternative way is putting the "/home/rho/app_rho/julia-1.5.3/bin/" path in your system $PATH variable 
+
+```bash
+echo PATH=\$PATH:/home/rho/app_rho/julia-1.5.3/bin/ >> ~/.profile
+source ~/.profile
 ```
 
 ## use julia
@@ -54,3 +61,19 @@ julia
 ```bash
 echo 'println("Hi, Rho. Welcome to Julia.")' > ~/.julia/config/startup.jl
 ```
+
+## updating
+
+julia-1.5.2 --> julia-1.5.3
+
+**NB**: the following words come from my self-trial, not from any material in the web
+
+- remove the folder "julia-1.5.2" in "app_rho"
+- download julia-1.5.3 from ustc's mirrors
+- cd app_rho
+- tar -xvzf Downloads/sftwr/julia-1.5.3-linux-x86_64.tar.gz --directory app_rho
+- cd app_rho/julia-1.5.3
+- sudo rm sudo ln -s /home/rho/app_rho/julia-1.5.3/bin/julia /usr/local/bin/julia/usr/local/bin/julia
+- enter "julia" in terminal to open julia
+- in pkg mode, enter "update"
+
